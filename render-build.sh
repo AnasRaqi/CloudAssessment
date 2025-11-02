@@ -4,12 +4,12 @@ set -e
 
 echo "Starting AlphaCloud build process..."
 
-# Install dependencies
-echo "Installing dependencies..."
-npm install
+# Install production dependencies only (omit dev dependencies like husky)
+echo "Installing production dependencies..."
+pnpm install --prod --prefer-offline
 
 # Build the application
 echo "Building application for production..."
-npm run build
+pnpm run build
 
 echo "Build completed successfully!"
