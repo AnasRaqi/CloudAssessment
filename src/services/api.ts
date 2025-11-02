@@ -38,7 +38,7 @@ export const authAPI = {
 export const questionnaireAPI = {
   async getQuestionnaire() {
     const { data, error } = await supabase.functions.invoke('questionnaire', {
-      body: { client_id: 'naqel' },
+      body: { client_id: 'default' },
       headers: {
         Authorization: `Bearer ${ANON_KEY}`,
       },
@@ -52,7 +52,7 @@ export const questionnaireAPI = {
 
   async saveQuestionnaire(sections: any, submit = false) {
     const { data, error } = await supabase.functions.invoke('questionnaire', {
-      body: { client_id: 'naqel', sections, submit },
+      body: { client_id: 'default', sections, submit },
       headers: {
         Authorization: `Bearer ${ANON_KEY}`,
       },
@@ -69,7 +69,7 @@ export const questionnaireAPI = {
 export const assessmentAPI = {
   async getAssessment() {
     const { data, error } = await supabase.functions.invoke('assessment', {
-      body: { client_id: 'naqel' },
+      body: { client_id: 'default' },
       headers: {
         Authorization: `Bearer ${ANON_KEY}`,
       },
@@ -83,7 +83,7 @@ export const assessmentAPI = {
 
   async updateAssessment(assessmentData: any) {
     const { data, error } = await supabase.functions.invoke('assessment', {
-      body: { client_id: 'naqel', ...assessmentData },
+      body: { client_id: 'default', ...assessmentData },
       headers: {
         Authorization: `Bearer ${ANON_KEY}`,
       },
@@ -100,10 +100,10 @@ export const assessmentAPI = {
 export const uploadAPI = {
   async uploadFile(fileData: string, fileName: string, section: string) {
     try {
-      console.log('Calling file-upload edge function with:', { client_id: 'naqel', fileName, section });
+      console.log('Calling file-upload edge function with:', { client_id: 'default', fileName, section });
       
       const { data, error } = await supabase.functions.invoke('file-upload', {
-        body: { client_id: 'naqel', fileData, fileName, section },
+        body: { client_id: 'default', fileData, fileName, section },
         headers: {
           Authorization: `Bearer ${ANON_KEY}`,
         },
@@ -149,7 +149,7 @@ export const emailAPI = {
 export const submittedAssessmentsAPI = {
   async getSubmittedAssessments() {
     const { data, error } = await supabase.functions.invoke('submitted-assessments', {
-      body: { client_id: 'naqel' },
+      body: { client_id: 'default' },
       headers: {
         Authorization: `Bearer ${ANON_KEY}`,
       },
@@ -163,7 +163,7 @@ export const submittedAssessmentsAPI = {
 
   async createNewAssessment() {
     const { data, error } = await supabase.functions.invoke('submitted-assessments', {
-      body: { client_id: 'naqel', action: 'create_new' },
+      body: { client_id: 'default', action: 'create_new' },
       headers: {
         Authorization: `Bearer ${ANON_KEY}`,
       },
@@ -177,7 +177,7 @@ export const submittedAssessmentsAPI = {
 
   async deleteAssessment(assessmentId: string) {
     const { data, error } = await supabase.functions.invoke('submitted-assessments', {
-      body: { client_id: 'naqel', action: 'delete', assessment_id: assessmentId },
+      body: { client_id: 'default', action: 'delete', assessment_id: assessmentId },
       headers: {
         Authorization: `Bearer ${ANON_KEY}`,
       },

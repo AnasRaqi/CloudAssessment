@@ -111,7 +111,7 @@ const AssessmentPage: React.FC = () => {
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-3xl font-bold text-white mb-2">Assessment Report</h2>
-              <p className="text-alphacloud-textSecondary">AlphaCloud GCP Assessment Results</p>
+              <p className="text-alphacloud-textSecondary">Questionnaire Assessment Results</p>
             </div>
             <StatusBadge status={status} />
           </div>
@@ -246,7 +246,7 @@ const AssessmentPage: React.FC = () => {
 
       <footer className="bg-gray-800 border-t border-gray-700 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-alphacloud-textSecondary">
-          © 2025 AlphaCloud | Confidential - For Naqel Use Only
+          Developed by Anas Raqi
         </div>
       </footer>
     </div>

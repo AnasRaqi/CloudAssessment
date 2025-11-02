@@ -39,6 +39,8 @@ export interface AuthResponse {
   success: boolean;
   token: string;
   message: string;
+  accessType?: 'full' | 'assessment';
+  username?: string;
 }
 
 export interface FieldDefinition {

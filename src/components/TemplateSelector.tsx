@@ -82,8 +82,8 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onTemplateSelect, s
   const downloadTemplate = () => {
     // Create a link to download the template file
     const link = document.createElement('a');
-    link.href = '/AlphaCloud_Questionnaire_Template.pdf';
-    link.download = 'AlphaCloud_Questionnaire_Template.pdf';
+    link.href = '/Questionnaire_Template.pdf';
+    link.download = 'Questionnaire_Template.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

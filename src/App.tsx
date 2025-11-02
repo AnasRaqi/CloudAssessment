@@ -13,6 +13,22 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   return isAuthenticated ? <>{children}</> : <Navigate to="/" />;
 };
 
+// Role-based Protected Route Component (Full Access Only)
+const FullAccessRoute = ({ children }: { children: React.ReactNode }) => {
+  const { isAuthenticated, user } = useAuth();
+  
+  if (!isAuthenticated) {
+    return <Navigate to="/" />;
+  }
+  
+  // If user is assessment type, redirect to questionnaire
+  if (user?.accessType === 'assessment') {
+    return <Navigate to="/questionnaire" />;
+  }
+  
+  return <>{children}</>;
+};
+
 // Submitted Page Wrapper
 const SubmittedPage = () => {
   const navigate = (path: string) => {
@@ -30,9 +46,9 @@ function AppContent() {
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+            <FullAccessRoute>
               <Dashboard />
-            </ProtectedRoute>
+            </FullAccessRoute>
           }
         />
         <Route
@@ -46,17 +62,17 @@ function AppContent() {
         <Route
           path="/assessment"
           element={
-            <ProtectedRoute>
+            <FullAccessRoute>
               <AssessmentPage />
-            </ProtectedRoute>
+            </FullAccessRoute>
           }
         />
         <Route
           path="/submitted"
           element={
-            <ProtectedRoute>
+            <FullAccessRoute>
               <SubmittedPage />
-            </ProtectedRoute>
+            </FullAccessRoute>
           }
         />
       </Routes>

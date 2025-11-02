@@ -98,7 +98,7 @@ const Dashboard: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-white mb-2">Assessment Dashboard</h2>
-          <p className="text-gray-400">GCP Commitment Sizing and Assessment for Naqel</p>
+          <p className="text-gray-400">Questionnaire Management and Assessment</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
@@ -135,7 +135,7 @@ const Dashboard: React.FC = () => {
             <p className="text-gray-400 mb-4">
               {assessment?.assessment?.status === 'completed'
                 ? 'Assessment completed and available for review'
-                : 'Waiting for AlphaCloud assessment'}
+                : 'Waiting for assessment review'}
             </p>
             <button
               onClick={() => navigate('/assessment')}
@@ -261,7 +261,7 @@ const Dashboard: React.FC = () => {
 
       <footer className="bg-[#2F3134] border-t border-gray-700 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-400">
-          © 2025 AlphaCloud | Confidential - For Naqel Use Only
+          Developed by Anas Raqi
         </div>
       </footer>
     </div>

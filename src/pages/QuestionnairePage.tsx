@@ -78,7 +78,7 @@ const QuestionnairePage: React.FC = () => {
   };
 
   const handleSubmit = async () => {
-    if (window.confirm('Submit questionnaire? This will notify AlphaCloud team.')) {
+    if (window.confirm('Submit questionnaire? Your assessment will be processed for review.')) {
       try {
         // Send email notification first
         await sendEmail('questionnaire_submitted');
@@ -242,7 +242,7 @@ const QuestionnairePage: React.FC = () => {
 
       <footer className="bg-gray-800 border-t border-gray-700 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-alphacloud-textSecondary">
-          © 2025 AlphaCloud | Confidential - For Naqel Use Only
+          Developed by Anas Raqi
         </div>
       </footer>
     </div>

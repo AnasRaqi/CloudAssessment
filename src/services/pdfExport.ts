@@ -8,7 +8,7 @@ export const generateAssessmentPDF = async (data: { sections: any; assessment: a
     const { data: responseData, error } = await supabase.functions.invoke('pdf-export', {
       body: { 
         assessmentData: data,
-        client_id: 'naqel'
+        client_id: 'default'
       },
       headers: {
         Authorization: `Bearer ${ANON_KEY}`,
