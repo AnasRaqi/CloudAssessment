@@ -20,7 +20,7 @@ A comprehensive questionnaire management system built with React, TypeScript, an
 
 ### Full Access (Admin)
 - **Username**: `client`
-- **Password**: `secureAccess2025`
+- **Password**: `secureAccess@2025`
 - **Capabilities**:
   - Dashboard access
   - Submit new questionnaires
@@ -30,7 +30,7 @@ A comprehensive questionnaire management system built with React, TypeScript, an
 
 ### Assessment Access (Customer)
 - **Username**: `assessment`
-- **Password**: `secureAccess2025`
+- **Password**: `secureAccess@2025`
 - **Capabilities**:
   - Submit new questionnaires only
   - No access to dashboard, submitted items, or assessments

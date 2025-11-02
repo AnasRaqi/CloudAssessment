@@ -8,7 +8,7 @@ The application now supports **two access types**:
 
 ### **1. Full Access (Admin)**
 - **Username**: `client`
-- **Password**: `secureAccess2025`
+- **Password**: `secureAccess@2025`
 - **Features**:
   - ✅ Dashboard access
   - ✅ Submit new questionnaires
@@ -18,7 +18,7 @@ The application now supports **two access types**:
 
 ### **2. Assessment Access (Customer)**
 - **Username**: `assessment`
-- **Password**: `secureAccess2025`
+- **Password**: `secureAccess@2025`
 - **Features**:
   - ✅ Submit new questionnaires ONLY
   - ❌ Cannot view submitted questionnaires
@@ -126,7 +126,7 @@ If the edge functions weren't deployed, update the following files in your Supab
 ### **Test Full Access**
 1. Go to your Railway URL
 2. Select "Full Access"
-3. Enter password: `secureAccess2025`
+3. Enter password: `secureAccess@2025`
 4. Verify you can access:
    - Dashboard
    - New Questionnaire
@@ -135,7 +135,7 @@ If the edge functions weren't deployed, update the following files in your Supab
 ### **Test Assessment Access**
 1. Log out
 2. Select "Assessment Access"
-3. Enter password: `secureAccess2025`
+3. Enter password: `secureAccess@2025`
 4. Verify:
    - ✅ Can submit new questionnaires
    - ❌ Cannot access Dashboard (auto-redirected to questionnaire)
@@ -170,7 +170,7 @@ Contains all npm scripts and dependencies. No changes needed.
 ### **Login Issues**
 - Verify auth-login edge function is deployed with new authentication logic
 - Check browser console for errors
-- Verify credentials: 'client' or 'assessment' with password 'secureAccess2025'
+- Verify credentials: 'client' or 'assessment' with password 'secureAccess@2025'
 
 ## 📝 **Additional Notes**
 
